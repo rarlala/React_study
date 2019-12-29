@@ -31,7 +31,9 @@ function UserList(){
     <div>
       {
         users.map(
-          user=> (<User user={user}/>)
+          // key를 사용하는것이 더 효율적이다.
+          // user=> (<User user={user} key={user.id} />)
+          (user, index)=> (<User user={user} />)
         )
       }
     </div>
